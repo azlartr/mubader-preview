@@ -739,5 +739,13 @@
   "youtube": "https://www.youtube.com/channel/UCNu1M5iKoDOvg7pJyx9KF0g",
   "whatsapp": "https://wa.me/966500396915"
  },
- "applyUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdwyCQxu8ZkQnAYwz_xGmipN8US0bhkT4LOc8wZZfusi4sQxw/viewform"
+ "applyUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdwyCQxu8ZkQnAYwz_xGmipN8US0bhkT4LOc8wZZfusi4sQxw/viewform",
+ "xposts": [
+  {
+   "url": ""
+  },
+  {
+   "url": ""
+  }
+ ]
 }
