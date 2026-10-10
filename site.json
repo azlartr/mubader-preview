@@ -1,0 +1,743 @@
+{
+ "version": 1,
+ "hero": {
+  "eyebrow": "جمعية المبادرات المتميزة · جدة",
+  "title": "الريادة والتميّز في",
+  "titleStrong": "المبادرات المجتمعية",
+  "lead": "مبادرات مجتمعية مستدامة وعالية الجودة، يقدّمها فريق متخصص وفق أفضل الممارسات العالمية، بتكامل مع شركاء النجاح.",
+  "image": "assets/img/hero.webp",
+  "capTitle": "صناعيو المستقبل · النسخة الخامسة",
+  "capSub": "حفل التدشين، سبتمبر 2026",
+  "hl1Num": "+500",
+  "hl1Unit": "ألف",
+  "hl1Text": "مستفيد لمسته مبادراتنا",
+  "hl2Title": "رؤية 2030",
+  "hl2Text": "بوصلتنا في كل مبادرة"
+ },
+ "stats": [
+  {
+   "num": "500",
+   "unit": "ألف",
+   "label": "إجمالي المستفيدين",
+   "icon": "people"
+  },
+  {
+   "num": "1",
+   "unit": "مليون",
+   "label": "الساعات التطوعية",
+   "icon": "clock"
+  },
+  {
+   "num": "400",
+   "unit": "ألف",
+   "label": "المعلمون والمعلمات المستهدفون",
+   "icon": "teacher"
+  },
+  {
+   "num": "100",
+   "unit": "ألف",
+   "label": "الطلاب المستفيدون",
+   "icon": "book"
+  },
+  {
+   "num": "80",
+   "unit": "ألف",
+   "label": "المتطوعون",
+   "icon": "hand"
+  },
+  {
+   "num": "20",
+   "unit": "",
+   "label": "الشراكات",
+   "icon": "link"
+  },
+  {
+   "num": "5",
+   "unit": "",
+   "label": "المبادرات",
+   "icon": "flag"
+  },
+  {
+   "num": "4",
+   "unit": "",
+   "label": "المناطق المستهدفة",
+   "icon": "pin"
+  }
+ ],
+ "news": [
+  {
+   "title": "تدشين مبادرة صناعيو المستقبل النسخة الخامسة",
+   "date": "2026-09-14",
+   "image": "assets/news/n1082.webp",
+   "link": "https://diorg.org/News/Details/1082",
+   "tag": "صناعيو المستقبل",
+   "body": "‏في انطلاقة جديدة نحو أثرٍ أكبر، دشّن صاحب السمو الملكي نائب أمير منطقة مكة المكرمة مبادرة «صناعيو المستقبل» خلال افتتاح منتدى الصناعة السعودي 2026. ‏خطوة جديدة نحو جيلٍ أكثر وعيًا بفرص الصناعة، وأكثر استعدادًا لصناعة مس"
+  },
+  {
+   "title": "تدشين مبادرة صناعيو المستقبل في الرياض",
+   "date": "2026-09-16",
+   "image": "",
+   "link": "https://diorg.org/News/Details/1083",
+   "tag": "",
+   "body": ""
+  },
+  {
+   "title": "الإعلان عن أسماء المرشحين لعضوية مجلس إدارة الجمعية للدورة الثانية (2026–2029م)",
+   "date": "2026-04-01",
+   "image": "",
+   "link": "https://diorg.org/News/Details/1080",
+   "tag": "",
+   "body": ""
+  },
+  {
+   "title": "صناعيو المستقبل مبادرة وطنية لتعزيز الابتكار الصناعي",
+   "date": "2024-12-03",
+   "image": "assets/news/n1078.webp",
+   "link": "https://diorg.org/News/Details/1078",
+   "tag": "",
+   "body": ""
+  },
+  {
+   "title": "مٌحافظ جدة يدشّن النسخة الثالثة",
+   "date": "2024-12-03",
+   "image": "assets/news/n1077.webp",
+   "link": "https://diorg.org/News/Details/1077",
+   "tag": "",
+   "body": ""
+  },
+  {
+   "title": "محافظ جدة يكرِّم الفائزين في النسخة الثانية",
+   "date": "2024-12-03",
+   "image": "assets/news/n1076.webp",
+   "link": "https://diorg.org/News/Details/1076",
+   "tag": "",
+   "body": ""
+  },
+  {
+   "title": "جمعية المبادرات المتميزة و تعليم جدة _ معاً في (كلنا نقدرك)",
+   "date": "2024-10-11",
+   "image": "assets/news/n1075.webp",
+   "link": "https://diorg.org/News/Details/1075",
+   "tag": "",
+   "body": ""
+  }
+ ],
+ "films": [
+  {
+   "youtube": "PMNOePX8kU4",
+   "title": "مبادرة صناعيو المستقبل النسخة الأولى",
+   "kind": "فلم شركاؤنا",
+   "cover": "assets/img/film-industry.webp"
+  },
+  {
+   "youtube": "SUl6D6_mLmA",
+   "title": "فعاليات كلنا نقدرك 2023 ج2",
+   "kind": "برومو",
+   "cover": "assets/img/film-teachers.webp"
+  },
+  {
+   "youtube": "lJ6PebbciW4",
+   "title": "حفل مبادرة صناعيو المستقبل النسخة الأولى",
+   "kind": "برومو",
+   "cover": "assets/img/film-honor.webp"
+  },
+  {
+   "youtube": "YwZBXzTINB8",
+   "title": "فعاليات كلنا نقدرك 2023 ج1",
+   "kind": "برومو",
+   "cover": "assets/img/film-teacher2.webp"
+  },
+  {
+   "youtube": "9S72XhGFPw8",
+   "title": "ختام تحكيم مبادرة صناعيو المستقبل",
+   "kind": "برومو",
+   "cover": "assets/img/film-launch.webp"
+  },
+  {
+   "youtube": "e0ycN0JJXiM",
+   "title": "بداية تحكيم مبادرة صناعيو المستقبل",
+   "kind": "برومو",
+   "cover": "assets/img/film-industry.webp"
+  }
+ ],
+ "ads": [
+  {
+   "image": "assets/ads/ad21.webp",
+   "title": "قريباً غبقة مبادر في رمضان"
+  },
+  {
+   "image": "assets/ads/ad31.webp",
+   "title": "جائزة أهالي جدة للمعلم المتميز: مليون ريال"
+  },
+  {
+   "image": "assets/ads/ad16.webp",
+   "title": "حصول الجمعية على شهادة الأيزو 9001"
+  },
+  {
+   "image": "assets/ads/ad22.webp",
+   "title": "فتح باب رفع الملفات لجائزة المعلم المتميز"
+  },
+  {
+   "image": "assets/ads/ad23.webp",
+   "title": "التقرير الختامي لجائزة المعلم المتميز"
+  },
+  {
+   "image": "assets/ads/ad25.webp",
+   "title": "التقرير النهائي للجائزة"
+  },
+  {
+   "image": "assets/ads/ad32.webp",
+   "title": "الجائزة التعليمية الأهم"
+  },
+  {
+   "image": "assets/ads/ad20.webp",
+   "title": "يوم التأسيس"
+  },
+  {
+   "image": "assets/ads/ad26.webp",
+   "title": "يوم التأسيس"
+  },
+  {
+   "image": "assets/ads/ad27.webp",
+   "title": "يوم التأسيس"
+  },
+  {
+   "image": "assets/ads/ad28.webp",
+   "title": "يوم التأسيس"
+  },
+  {
+   "image": "assets/ads/ad33.webp",
+   "title": "صناعيو المستقبل"
+  },
+  {
+   "image": "assets/ads/ad34.webp",
+   "title": "صناعيو المستقبل"
+  },
+  {
+   "image": "assets/ads/ad35.webp",
+   "title": "صناعيو المستقبل"
+  },
+  {
+   "image": "assets/ads/ad36.webp",
+   "title": "صناعيو المستقبل"
+  }
+ ],
+ "partners": [
+  {
+   "image": "assets/partners/sulaiman.webp",
+   "name": "السليمان الخيرية"
+  },
+  {
+   "image": "assets/partners/mahfouz.webp",
+   "name": "مؤسسة سالم بن محفوظ الأهلية"
+  },
+  {
+   "image": "assets/partners/sharbatly.webp",
+   "name": "مؤسسة حسن عباس شربتلي لخدمة المجتمع"
+  },
+  {
+   "image": "assets/partners/naghi.webp",
+   "name": "محمد يوسف ناغي"
+  },
+  {
+   "image": "assets/partners/ikea.webp",
+   "name": "ايكيا"
+  },
+  {
+   "image": "assets/partners/york.webp",
+   "name": "يورك"
+  },
+  {
+   "image": "assets/partners/granada.webp",
+   "name": "غرناطة مول"
+  },
+  {
+   "image": "assets/partners/andalus1.webp",
+   "name": "شركة الأندلس التعليمية"
+  },
+  {
+   "image": "assets/partners/andalus-schools.webp",
+   "name": "مدارس الأندلس الأهلية"
+  },
+  {
+   "image": "assets/partners/andalus.webp",
+   "name": "مدارس الأندلس العالمية"
+  },
+  {
+   "image": "assets/partners/brwin.webp",
+   "name": "جمعية بروين لتنمية الشباب"
+  },
+  {
+   "image": "assets/partners/sdc.webp",
+   "name": "SDC"
+  }
+ ],
+ "gov": [
+  {
+   "section": "التقارير",
+   "docs": [
+    {
+     "title": "التقرير الختامي لجمعية المبادرات المتميزة لعام 2025م",
+     "url": "https://diorg.org/Files/Goverments/2026_10_06_01_22_59_%D8%A7%D9%84%D8%AA%D9%82%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D8%AE%D8%AA%D8%A7%D9%85%D9%8A%20%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AA%D9%85%D9%8A%D8%B2%D8%A9%20%D9%84%D8%B9%D8%A7%D9%85%202025%D9%85%20%281%29.pdf"
+    }
+   ]
+  },
+  {
+   "section": "القوائم المالية",
+   "docs": [
+    {
+     "title": "القوائم المالية للجمعية لعام 2024",
+     "url": "https://diorg.org/Files/Goverments/2025_10_12_05_17_24_FinancialStatements2024.pdf"
+    },
+    {
+     "title": "القوائم المالية للجمعية لعام 2023",
+     "url": "https://diorg.org/Files/Goverments/2024_12_30_08_27_25_FNList2023.pdf"
+    },
+    {
+     "title": "القوائم المالية المدققة للعام 2022",
+     "url": "https://diorg.org/Files/Goverments/2023_11_13_10_30_38_%D8%A7%D9%84%D9%82%D9%88%D8%A7%D9%8A%D9%94%D9%85%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AA%D9%85%D9%8A%D8%B2%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B3%D9%88%D9%94%D9%88%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A%D8%A92022%D9%85.pdf"
+    },
+    {
+     "title": "القوائم المالية المدققة لعام 2021",
+     "url": "https://diorg.org/Files/Goverments/2022_11_07_10_37_21_%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%AF%D9%82%D9%82%D8%A9%20%D9%84%D8%B9%D8%A7%D9%85%202021.pdf"
+    }
+   ]
+  },
+  {
+   "section": "السياسات واللوائح",
+   "docs": [
+    {
+     "title": "اللائحة الاساسية لجمعية المبادرات المتميزة في المسؤولية",
+     "url": "https://diorg.org/Files/Goverments/2025_10_27_12_41_36_MainFile.pdf"
+    },
+    {
+     "title": "آلية التحقق من وصول التبرع من المتبرع إلى المستفيد النهائي",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%A2%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%AA%D8%AD%D9%82%D9%82_%D9%85%D9%86_%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D8%AA%D8%A8%D8%B1%D8%B9_%D9%85%D9%86_%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9_%D8%A5%D9%84%D9%89_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF_%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A.pdf"
+    },
+    {
+     "title": "آلية التدقيق لاختبار فاعلية كفاية السياسات والاجراءات والضوابط لمكافحة تمويل الإرهاب",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%A2%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%AA%D8%AF%D9%82%D9%8A%D9%82_%D9%84%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1_%D9%81%D8%A7%D8%B9%D9%84%D9%8A%D8%A9_%D9%83%D9%81%D8%A7%D9%8A%D8%A9_%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B3%D8%A7%D8%AA_%D9%88%D8%A7%D9%84%D8%A7%D8%AC%D8%B1%D8%A7%D8%A1%D8%A7%D8%AA_%D9%88%D8%A7%D9%84%D8%B6%D9%88%D8%A7%D8%A8%D8%B7_%D9%84%D9%85%D9%83%D8%A7%D9%81%D8%AD%D8%A9_%D8%AA%D9%85%D9%88%D9%8A%D9%84_%D8%A7%D9%84%D8%A5%D8%B1%D9%87%D8%A7%D8%A8.pdf"
+    },
+    {
+     "title": "آلية قبول وانسحاب أعضاء الجمعية العمومية",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%A2%D9%84%D9%8A%D8%A9_%D9%82%D8%A8%D9%88%D9%84_%D9%88%D8%A7%D9%86%D8%B3%D8%AD%D8%A7%D8%A8_%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9_%D8%A7%D9%84%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9.pdf"
+    },
+    {
+     "title": "ألية التأكد من استحقاق المستفيدين للخدمة",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%A3%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%AA%D8%A3%D9%83%D8%AF_%D9%85%D9%86_%D8%A7%D8%B3%D8%AA%D8%AD%D9%82%D8%A7%D9%82_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%D9%8A%D9%86_%D9%84%D9%84%D8%AE%D8%AF%D9%85%D8%A9.pdf"
+    },
+    {
+     "title": "الدليل الاجرائي لتجنب تنبيه العميل أو المتبرع المشتبه به",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84_%D8%A7%D9%84%D8%A7%D8%AC%D8%B1%D8%A7%D8%A6%D9%8A_%D9%84%D8%AA%D8%AC%D9%86%D8%A8_%D8%AA%D9%86%D8%A8%D9%8A%D9%87_%D8%A7%D9%84%D8%B9%D9%85%D9%8A%D9%84_%D8%A3%D9%88_%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B1%D8%B9_%D8%A7%D9%84%D9%85%D8%B4%D8%AA%D8%A8%D9%87_%D8%A8%D9%87.pdf"
+    },
+    {
+     "title": "الدليل التعريفي لمجلس الإدارة الإجراءات المتبعة لتعريف أعضاء المجلس الجديد بعمل الجمعية",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84_%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81%D9%8A_%D9%84%D9%85%D8%AC%D9%84%D8%B3_%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A5%D8%AC%D8%B1%D8%A7%D8%A1%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%AA%D8%A8%D8%B9%D8%A9_%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81_%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1_%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF_%D8%A8%D8%B9%D9%85%D9%84_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9.pdf"
+    },
+    {
+     "title": "تقييم المخاطر المتأصلة والكامنة",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%AA%D9%82%D9%8A%D9%8A%D9%85_%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B7%D8%B1_%D8%A7%D9%84%D9%85%D8%AA%D8%A3%D8%B5%D9%84%D8%A9_%D9%88%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%86%D8%A9.pdf"
+    },
+    {
+     "title": "دليل إجراءات الإبلاغ عن الاشتباه في عمليات غسل الأموال وتمويل الإرهاب",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%AF%D9%84%D9%8A%D9%84_%D8%A5%D8%AC%D8%B1%D8%A7%D8%A1%D8%A7%D8%AA_%D8%A7%D9%84%D8%A5%D8%A8%D9%84%D8%A7%D8%BA_%D8%B9%D9%86_%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87_%D9%81%D9%8A_%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA_%D8%BA%D8%B3%D9%84_%D8%A7%D9%84%D8%A3%D9%85%D9%88%D8%A7%D9%84_%D9%88%D8%AA%D9%85%D9%88%D9%8A%D9%84_%D8%A7%D9%84%D8%A5%D8%B1%D9%87%D8%A7%D8%A8.pdf"
+    },
+    {
+     "title": "سياسة آليات الرقابة والإشراف على المنظمة",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A2%D9%84%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%A8%D8%A9_%D9%88%D8%A7%D9%84%D8%A5%D8%B4%D8%B1%D8%A7%D9%81_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%A9.pdf"
+    },
+    {
+     "title": "سياسة إدارة المتطوعين",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D9%85%D8%AA%D8%B7%D9%88%D8%B9%D9%8A%D9%86.pdf"
+    },
+    {
+     "title": "سياسة الإستثمار",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1.pdf"
+    },
+    {
+     "title": "سياسة الاحتفاظ بالوثائق",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%81%D8%A7%D8%B8_%D8%A8%D8%A7%D9%84%D9%88%D8%AB%D8%A7%D8%A6%D9%82.pdf"
+    },
+    {
+     "title": "سياسة التبليغ عن المخالفات وحماية مقدمي البلاغات",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%AA%D8%A8%D9%84%D9%8A%D8%BA_%D8%B9%D9%86_%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A7%D8%AA_%D9%88%D8%AD%D9%85%D8%A7%D9%8A%D8%A9_%D9%85%D9%82%D8%AF%D9%85%D9%8A_%D8%A7%D9%84%D8%A8%D9%84%D8%A7%D8%BA%D8%A7%D8%AA.pdf"
+    },
+    {
+     "title": "سياسة التعامل مع الشركاء المنفذين والأطراف الثالثة",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%85%D9%84_%D9%85%D8%B9_%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%A1_%D8%A7%D9%84%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86_%D9%88%D8%A7%D9%84%D8%A3%D8%B7%D8%B1%D8%A7%D9%81_%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9.pdf"
+    },
+    {
+     "title": "سياسة التعامل مع المقبوضات",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%85%D9%84_%D9%85%D8%B9_%D8%A7%D9%84%D9%85%D9%82%D8%A8%D9%88%D8%B6%D8%A7%D8%AA.pdf"
+    },
+    {
+     "title": "سياسة الصرف على البرامج والأنشطة",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%B5%D8%B1%D9%81_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC_%D9%88%D8%A7%D9%84%D8%A3%D9%86%D8%B4%D8%B7%D8%A9.pdf"
+    },
+    {
+     "title": "سياسة الوقاية من عمليات غسل الأموال وجرائم تمويل الإرهاب",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9_%D9%85%D9%86_%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA_%D8%BA%D8%B3%D9%84_%D8%A7%D9%84%D8%A3%D9%85%D9%88%D8%A7%D9%84_%D9%88%D8%AC%D8%B1%D8%A7%D8%A6%D9%85_%D8%AA%D9%85%D9%88%D9%8A%D9%84_%D8%A7%D9%84%D8%A5%D8%B1%D9%87%D8%A7%D8%A8.pdf"
+    },
+    {
+     "title": "سياسة تعارض المصالح",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%AA%D8%B9%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D9%84%D8%AD.pdf"
+    },
+    {
+     "title": "سياسة تنظيم العلاقة مع المستفيدين وتقديم الخدمات",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%AA%D9%86%D8%B8%D9%8A%D9%85_%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A9_%D9%85%D8%B9_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%D9%8A%D9%86_%D9%88%D8%AA%D9%82%D8%AF%D9%8A%D9%85_%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA.pdf"
+    },
+    {
+     "title": "سياسة توجيه مبلغ التبرع الى مشروع آخر",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%AA%D9%88%D8%AC%D9%8A%D9%87_%D9%85%D8%A8%D9%84%D8%BA_%D8%A7%D9%84%D8%AA%D8%A8%D8%B1%D8%B9_%D8%A7%D9%84%D9%89_%D9%85%D8%B4%D8%B1%D9%88%D8%B9_%D8%A2%D8%AE%D8%B1.pdf"
+    },
+    {
+     "title": "سياسة جمع التبرعات",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%AC%D9%85%D8%B9_%D8%A7%D9%84%D8%AA%D8%A8%D8%B1%D8%B9%D8%A7%D8%AA.pdf"
+    },
+    {
+     "title": "سياسة خصوصية البيانات",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9_%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA.pdf"
+    },
+    {
+     "title": "سياسة مؤشرات وإجراءات عمليات غسيل الأموال وتـــمــويل الإرهـاب",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D9%85%D8%A4%D8%B4%D8%B1%D8%A7%D8%AA_%D9%88%D8%A5%D8%AC%D8%B1%D8%A7%D8%A1%D8%A7%D8%AA_%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA_%D8%BA%D8%B3%D9%8A%D9%84_%D8%A7%D9%84%D8%A3%D9%85%D9%88%D8%A7%D9%84_%D9%88%D8%AA%D9%80%D9%80%D9%80%D9%85%D9%80%D9%80%D9%88%D9%8A%D9%84_%D8%A7%D9%84%D8%A5%D8%B1%D9%87%D9%80%D8%A7%D8%A8.pdf"
+    },
+    {
+     "title": "قائمة مخاطر تمويل الارهاب وغسيل الاموال",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D9%85%D8%AE%D8%A7%D8%B7%D8%B1_%D8%AA%D9%85%D9%88%D9%8A%D9%84_%D8%A7%D9%84%D8%A7%D8%B1%D9%87%D8%A7%D8%A8_%D9%88%D8%BA%D8%B3%D9%8A%D9%84_%D8%A7%D9%84%D8%A7%D9%85%D9%88%D8%A7%D9%84.pdf"
+    },
+    {
+     "title": "لائحة أدوار ومسؤوليات مجلس الإدارة تجاه مكافحة غسل الأموال وتمويل الإرهاب",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D9%84%D8%A7%D8%A6%D8%AD%D8%A9_%D8%A3%D8%AF%D9%88%D8%A7%D8%B1_%D9%88%D9%85%D8%B3%D8%A4%D9%88%D9%84%D9%8A%D8%A7%D8%AA_%D9%85%D8%AC%D9%84%D8%B3_%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9_%D8%AA%D8%AC%D8%A7%D9%87_%D9%85%D9%83%D8%A7%D9%81%D8%AD%D8%A9_%D8%BA%D8%B3%D9%84_%D8%A7%D9%84%D8%A3%D9%85%D9%88%D8%A7%D9%84_%D9%88%D8%AA%D9%85%D9%88%D9%8A%D9%84_%D8%A7%D9%84%D8%A5%D8%B1%D9%87%D8%A7%D8%A8.pdf"
+    },
+    {
+     "title": "لائحة صرف المساعدات",
+     "url": "https://diorg.org/Files/Goverments/113516122024/%D9%84%D8%A7%D8%A6%D8%AD%D8%A9_%D8%B5%D8%B1%D9%81_%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A7%D8%AA.pdf"
+    }
+   ]
+  },
+  {
+   "section": "اجتماعات الجمعية العمومية",
+   "docs": [
+    {
+     "title": "اجتماع الجمعية العمومية العادية والغير عادية لعام 2024",
+     "url": "https://diorg.org/Files/Goverments/2025_10_27_12_44_01_Meeting.pdf"
+    },
+    {
+     "title": "محضر أجتماع الجمعية العمومية العادية الأول لعام 2023م.",
+     "url": "https://diorg.org/Files/Goverments/2023_12_17_05_52_03_%D9%85%D8%AD%D8%B6%D8%B1%20%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A7%D9%94%D9%88%D9%84%20%D9%84%D8%B9%D8%A7%D9%85%202023.pdf"
+    },
+    {
+     "title": "محضر أجتماع الجمعية العمومية العادية الأول لعام 2022م.",
+     "url": "https://diorg.org/Files/Goverments/2023_12_17_05_50_38_%D9%85%D8%AD%D8%B6%D8%B1%20%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A7%D9%94%D9%88%D9%84%20%D9%84%D8%B9%D8%A7%D9%85%202022%D9%85.pdf"
+    },
+    {
+     "title": "محضر أجتماع الجمعية العمومية الغير عادية 2023",
+     "url": "https://diorg.org/Files/Goverments/2023_12_06_09_54_57_%D9%85%D8%AD%D8%B6%D8%B1%20%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A7%D8%AF%D9%8A%D8%A9%20%D9%84%D8%B9%D8%A7%D9%85%202023.pdf"
+    },
+    {
+     "title": "محضر أجتماع الجمعية العمومية الغير عادية 2022",
+     "url": "https://diorg.org/Files/Goverments/2023_12_06_09_50_11_%D9%85%D8%AD%D8%B6%D8%B1%20%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%B1%20%D8%A7%D9%84%D8%B9%D8%A7%D8%AF%D9%8A%D8%A9%20%D9%84%D8%B9%D8%A7%D9%85%202022.pdf"
+    }
+   ]
+  },
+  {
+   "section": "الخطط السنوية",
+   "docs": [
+    {
+     "title": "الخطة التشغيلية لعام 2024",
+     "url": "https://diorg.org/Files/Goverments/2025_10_27_12_43_16_Plan_2024.pdf"
+    },
+    {
+     "title": "الخطة الاستراتيجية",
+     "url": "https://diorg.org/Files/Goverments/2022_11_07_10_54_33_%D8%A7%D9%84%D8%AE%D8%B7%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A9.pdf"
+    },
+    {
+     "title": "الخطة التشغيلية لعام 2022",
+     "url": "https://diorg.org/Files/Goverments/2022_11_07_10_51_59_%D8%A7%D9%84%D8%AE%D8%B7%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B4%D8%BA%D9%8A%D9%84%D9%8A%D8%A9%20%D9%84%D8%B9%D8%A7%D9%85%202022.pdf"
+    }
+   ]
+  }
+ ],
+ "annual": {
+  "title": "التقرير الختامي لجمعية المبادرات المتميزة لعام 2025م",
+  "url": "https://diorg.org/Files/Goverments/2026_10_06_01_22_59_%D8%A7%D9%84%D8%AA%D9%82%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D8%AE%D8%AA%D8%A7%D9%85%D9%8A%20%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AA%D9%85%D9%8A%D8%B2%D8%A9%20%D9%84%D8%B9%D8%A7%D9%85%202025%D9%85%20%281%29.pdf"
+ },
+ "board": {
+  "term2": [
+   {
+    "name": "د. غسان بن أحمد السليمان",
+    "role": "رئيس مجلس الإدارة",
+    "photo": "assets/people/683844f691.webp"
+   },
+   {
+    "name": "د. مهند بن نعيم الشيخ",
+    "role": "نائب رئيس مجلس الإدارة",
+    "photo": "assets/people/abad613d0f.webp"
+   },
+   {
+    "name": "أحمد بن عبدالقادر باعشن",
+    "role": "عضو مجلس الإدارة",
+    "photo": "assets/people/455ad5e057.webp"
+   },
+   {
+    "name": "فياض أسعد أسعد الدندشي",
+    "role": "عضو مجلس الإدارة",
+    "photo": "assets/people/a6dd8bb51f.webp"
+   },
+   {
+    "name": "سعود غسان أحمد السليمان",
+    "role": "عضو مجلس الإدارة",
+    "photo": "assets/people/39a01f5085.webp"
+   },
+   {
+    "name": "م. سهل مخضار خضران الثبيتي",
+    "role": "عضو مجلس الإدارة",
+    "photo": "assets/people/1b3c161c86.webp"
+   }
+  ],
+  "term1": [
+   {
+    "name": "د. غسان بن أحمد السليمان",
+    "role": "رئيس مجلس الإدارة",
+    "photo": "assets/people/683844f691.webp"
+   },
+   {
+    "name": "عماد بن عبدالقادر بن المهيدب",
+    "role": "",
+    "photo": ""
+   },
+   {
+    "name": "فوزي بن عبدالله النهدي",
+    "role": "",
+    "photo": ""
+   },
+   {
+    "name": "عبدالإله بن سالم بن محفوظ",
+    "role": "",
+    "photo": "assets/people/a05da7a2a8.webp"
+   },
+   {
+    "name": "أحمد بن عبدالقادر باعشن",
+    "role": "عضو مجلس الإدارة",
+    "photo": "assets/people/455ad5e057.webp"
+   },
+   {
+    "name": "د. مهند بن نعيم الشيخ",
+    "role": "عضو مجلس إدارة",
+    "photo": "assets/people/abad613d0f.webp"
+   },
+   {
+    "name": "محمد بن يوسف بن ناغي",
+    "role": "",
+    "photo": ""
+   },
+   {
+    "name": "أسامة بن عبدالله بن الخريجي",
+    "role": "",
+    "photo": ""
+   }
+  ]
+ },
+ "team": {
+  "exec": [
+   {
+    "name": "د. مهند بن نعيم الشيخ",
+    "role": "رئيس اللجنة التنفيذية",
+    "photo": "assets/people/37d922fe8e.webp"
+   },
+   {
+    "name": "عبدالله بن سعد السليمان",
+    "role": "نائب رئيس اللجنة التنفيذية",
+    "photo": "assets/people/3ff9b97a49.webp"
+   },
+   {
+    "name": "حسن الزهراني",
+    "role": "عضو اللجنة",
+    "photo": "assets/people/fa3f9c8a4e.webp"
+   },
+   {
+    "name": "د. عبدالله بن صالح الغامدي",
+    "role": "عضو اللجنة",
+    "photo": "assets/people/896bbb7eda.webp"
+   }
+  ],
+  "staff": [
+   {
+    "name": "أحمد بن إبراهيم القرشي",
+    "role": "الرئيس التنفيذي (المكلف)",
+    "photo": "assets/people/906568b726.webp"
+   },
+   {
+    "name": "خالد نجيب",
+    "role": "مدير الشؤون الإدارية والخدمات المشتركة",
+    "photo": "assets/people/78937baf8f.webp"
+   },
+   {
+    "name": "نجوى البركاتي",
+    "role": "مديرة الشؤون الإدارية والشراكات",
+    "photo": "assets/people/3e24938ea2.webp"
+   },
+   {
+    "name": "عبدالله الاندنوسي",
+    "role": "المدير المالي",
+    "photo": "assets/people/b957ab9b1a.webp"
+   },
+   {
+    "name": "أحمد الفتياني",
+    "role": "إدارة التصاميم والإبداع",
+    "photo": "assets/people/678a755248.webp"
+   }
+  ],
+  "fin": [
+   {
+    "name": "محمد عصام شيخ",
+    "role": "رئيس لجنة تنمية الموارد المالية",
+    "photo": "assets/people/957599fb8a.webp"
+   },
+   {
+    "name": "د. ندى العولقي",
+    "role": "نائب رئيس اللجنة",
+    "photo": "assets/people/dd07c880f3.webp"
+   },
+   {
+    "name": "رغد عبدالعزيز ناصر",
+    "role": "عضو اللجنة",
+    "photo": "assets/people/d8dc158cd3.webp"
+   },
+   {
+    "name": "محمد عمورة",
+    "role": "عضو اللجنة",
+    "photo": "assets/people/76a2003530.webp"
+   },
+   {
+    "name": "محمد جمجوم",
+    "role": "عضو اللجنة",
+    "photo": "assets/people/e5cb39d31a.webp"
+   }
+  ]
+ },
+ "assembly": {
+  "orgs": [
+   {
+    "name": "شركة مواد الإعمار القابضة",
+    "logo": ""
+   },
+   {
+    "name": "شركة آل سالم لتكييف الهواء",
+    "logo": ""
+   },
+   {
+    "name": "شركة القائد السعودية للنقل",
+    "logo": ""
+   },
+   {
+    "name": "شركة فاروق وشركائهم",
+    "logo": ""
+   },
+   {
+    "name": "شركة اليمامة للصناعات الحديدية",
+    "logo": ""
+   },
+   {
+    "name": "مجموعة السليمان",
+    "logo": ""
+   },
+   {
+    "name": "مصنع ثقة الخشب للصناعات الخشبية",
+    "logo": ""
+   },
+   {
+    "name": "مجموعة شركات الزاهد",
+    "logo": ""
+   },
+   {
+    "name": "جامعة الأعمال والتكنولوجيا",
+    "logo": ""
+   },
+   {
+    "name": "شركة الشرق الأوسط مبكو",
+    "logo": ""
+   },
+   {
+    "name": "سدافكو",
+    "logo": ""
+   }
+  ],
+  "people": [
+   {
+    "name": "خالد أحمد عبدالعزيز الحمدان",
+    "role": "",
+    "photo": "assets/people/9f0c46a641.webp"
+   },
+   {
+    "name": "د. سليمان بن أحمد موصلي",
+    "role": "",
+    "photo": "assets/people/3b3d2bfb88.webp"
+   },
+   {
+    "name": "صالح محمد بن لادن",
+    "role": "",
+    "photo": "assets/people/318ad4ec36.webp"
+   },
+   {
+    "name": "عمر بن عبدالعزيز الغامدي",
+    "role": "",
+    "photo": "assets/people/4d97d399be.webp"
+   },
+   {
+    "name": "فياض أسعد أسعد الدندشي",
+    "role": "",
+    "photo": "assets/people/a6dd8bb51f.webp"
+   },
+   {
+    "name": "محمد بن عبود العمودي",
+    "role": "",
+    "photo": "assets/people/aa16e6348c.webp"
+   },
+   {
+    "name": "محمد بن وجيه بن حسن عباس شربتلي",
+    "role": "",
+    "photo": "assets/people/1199bc6b23.webp"
+   },
+   {
+    "name": "يوسف بن عبدالغني الخريجي",
+    "role": "",
+    "photo": "assets/people/a21b68962c.webp"
+   },
+   {
+    "name": "عبدالإله بن سالم بن محفوظ",
+    "role": "",
+    "photo": "assets/people/a05da7a2a8.webp"
+   },
+   {
+    "name": "أيمن بن إسماعيل أبو داود",
+    "role": "",
+    "photo": "assets/people/19acd06f4e.webp"
+   },
+   {
+    "name": "عبدالله بن عبدالرحمن الجميح",
+    "role": "",
+    "photo": "assets/people/9ff9765dd9.webp"
+   },
+   {
+    "name": "صاحبة السمو الملكي الأميرة منال بنت مساعد بن سعود بن عبدالعزيز آل سعود",
+    "role": "",
+    "photo": ""
+   }
+  ]
+ },
+ "contact": {
+  "address": "المملكة العربية السعودية، جدة، حي النعيم، شارع الأمير سلطان",
+  "email": "info@diorg.org",
+  "phone": "0500396915",
+  "license": "1960"
+ },
+ "social": {
+  "x": "https://twitter.com/Diorg01",
+  "instagram": "https://www.instagram.com/diorg01",
+  "youtube": "https://www.youtube.com/channel/UCNu1M5iKoDOvg7pJyx9KF0g",
+  "whatsapp": "https://wa.me/966500396915"
+ },
+ "applyUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdwyCQxu8ZkQnAYwz_xGmipN8US0bhkT4LOc8wZZfusi4sQxw/viewform"
+}
