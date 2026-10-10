@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
   await p.waitForTimeout(15000);
   for (const f of p.frames()) {
     const u = f.url(); if (!/twitter|x\.com/.test(u)) continue;
-    const txt = await f.evaluate(() => document.body ? document.body.innerText.slice(0, 600) : '').catch(e => 'ERR ' + e);
+    const txt = await f.evaluate(() => document.body ? document.body.innerText.slice(0, 300) + ' | imgs=' + document.images.length : '').catch(e => 'ERR ' + e);
     const ids = await f.evaluate(() => [...new Set([...document.querySelectorAll('a[href*="/status/"]')].map(a => a.href.match(/status\/(\d+)/)?.[1]).filter(Boolean))]).catch(() => []);
     console.log('FRAME', u.slice(0, 120), '\nTEXT', JSON.stringify(txt), '\nIDS', ids.join(','));
   }
