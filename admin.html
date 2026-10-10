@@ -287,7 +287,7 @@ textarea.inp{resize:vertical;min-height:84px}
     [].slice.call(document.querySelectorAll('.room')).forEach(function(b){b.setAttribute('aria-current',b.dataset.id===id)});
     var h='<div class="top"><h2>'+esc(r.l)+'</h2><span class="grow"></span><span class="state'+(dirty?' dirty':'')+'" id="stateChip">'+(dirty?'تعديلات غير منشورة':'محدّث')+'</span><p class="hint">'+esc(r.hint)+'</p></div>';
     if(r.obj){ var o=site[r.obj]||{}; h+='<div class="card"><div class="row">'+r.fields.map(function(f){return field(f,o[f.k],r.obj+'.'+f.k)}).join('')+'</div></div>'; if(r.extra) h+='<div class="card">'+field(r.extra,site[r.extra.k],r.extra.k)+'</div>'; if(r.social){ site.social=site.social||{}; h+='<div class="group-title">حسابات التواصل الاجتماعي</div><div class="card"><div class="row">'+r.social.map(function(f){return field(f,site.social[f.k],'social.'+f.k)}).join('')+'</div></div>'; } }
-    else if(r.list){ if(r.id==='ads') h+='<div class="card xin"><div class="xin-h"><span class="xin-i"><svg width="16" height="16"><use href="#s-x"/></svg></span><b>إضافة إعلان من إكس</b></div><p class="hint" style="margin:0 0 10px">انسخ رابط التغريدة من إكس واضغط الزر: يلصق الرابط ويسحب الصورة والنص ويضيفها أول اللوحة.</p><div class="xin-row"><input id="xUrl" dir="ltr" placeholder="https://x.com/Diorg01/status/…"><button type="button" class="xin-b" id="xGo">الصق واسحب</button></div></div>';
+    else if(r.list){ if(r.id==='ads'){ site.xposts=site.xposts||[]; h+='<div class="card xin"><div class="xin-h"><span class="xin-i"><svg width="16" height="16"><use href="#s-x"/></svg></span><b>تغريدات من إكس</b></div><p class="hint" style="margin:0 0 10px">انسخ رابط التغريدة من إكس (مشاركة ← نسخ الرابط) واضغط الزر. التغريدة تظهر تحت لوحة الإعلانات بصورها وفيديوهاتها كما هي على إكس.</p><div class="xin-row"><input id="xUrl" dir="ltr" placeholder="https://x.com/Diorg01/status/…"><button type="button" class="xin-b" id="xGo">الصق وأضف</button></div></div>'+listEditor(site.xposts,'xposts',[{k:'url',l:'رابط التغريدة',dir:'ltr'}],'تغريدة',{url:''})+'<div class="group-title">بوسترات اللوحة</div>'; }
       h+=listEditor(site[r.list],r.list,r.fields,r.item,r.blank); }
     else if(r.special==='gov'){
       site.annual=site.annual||{title:'',url:''};
@@ -349,26 +349,13 @@ textarea.inp{resize:vertical;min-height:84px}
   }
 
   /* ---------- add an announcement straight from an X post ---------- */
-  function xToken(id){ return ((Number(id)/1e15)*Math.PI).toString(36).replace(/(0+|\.)/g,''); }
   $('#main').addEventListener('click',function(e){
     var b=e.target.closest('#xGo'); if(!b) return; var inp=$('#xUrl');
     var go=function(){
-      var m=/status(?:es)?\/(\d{5,})/.exec(inp.value||''); if(!m){ toast('ما لقيت رابط تغريدة. انسخ رابط التغريدة من إكس (زر المشاركة ← نسخ الرابط) وجرّب مرة ثانية.'); return; }
-      var id=m[1], link='https://x.com/i/status/'+id; b.disabled=true; b.textContent='جارٍ السحب…';
-      fetch('https://cdn.syndication.twimg.com/tweet-result?id='+id+'&lang=ar&token='+xToken(id)).then(function(r){ if(!r.ok) throw {status:r.status}; return r.json(); }).then(function(tw){
-        var md=(tw.mediaDetails||[]).filter(function(x){return x.type==='photo'})[0], src=md?md.media_url_https:(tw.photos&&tw.photos[0]&&tw.photos[0].url);
-        var text=String(tw.text||'').replace(/https:\/\/t\.co\/\S+/g,'').trim().slice(0,200);
-        if(!src) throw {nophoto:true};
-        // keep a copy of the image in our own files; if X refuses the download, use its link directly
-        return fetch(src+'?name=large').then(function(r){ if(!r.ok) throw 0; return r.blob(); }).then(function(bl){ return toWebp(bl,1400); }).then(upB64)
-          .catch(function(){ return src; }).then(function(img){ return {image:img,title:text,link:link}; });
-      }).then(function(ad){
-        site.ads=site.ads||[]; site.ads.unshift(ad); changed(); show(room); buildRooms(); [].slice.call(document.querySelectorAll('.room')).forEach(function(x){x.setAttribute('aria-current',x.dataset.id===room)});
-        toast('أُضيف الإعلان أول اللوحة. اضغط «نشر على الموقع» ليظهر.');
-      }).catch(function(err){
-        b.disabled=false; b.textContent='الصق واسحب';
-        toast(err&&err.nophoto ? 'التغريدة ما فيها صورة. اللوحة بتعرض بوسترات بس.' : 'إكس ما سمح بسحب التغريدة هلأ. احفظ صورة التغريدة على جهازك وارفعها بإعلان جديد تحت.');
-      });
+      var m=/status(?:es)?\/(\d{5,})/.exec(inp.value||''); if(!m){ toast('ما لقيت رابط تغريدة. انسخ الرابط من إكس (مشاركة ← نسخ الرابط) وجرّب مرة ثانية.'); return; }
+      site.xposts=site.xposts||[]; var url='https://x.com/Diorg01/status/'+m[1];
+      if(site.xposts.some(function(p){return (p.url||'').indexOf(m[1])>=0})){ toast('هالتغريدة مضافة من قبل.'); return; }
+      site.xposts.unshift({url:url}); changed(); show(room); toast('أُضيفت التغريدة. اضغط «نشر على الموقع» لتظهر.');
     };
     if(!inp.value && navigator.clipboard && navigator.clipboard.readText){ navigator.clipboard.readText().then(function(v){ inp.value=(v||'').trim(); go(); }).catch(go); } else go();
   });

@@ -73,6 +73,16 @@
       var rot = [-1.6, 1.2, -0.6, 1.8, -1.1];
       el.innerHTML = list.map(function (a, i) { return '<button class="poster' + (a.x ? ' from-x' : '') + '" type="button" style="--r:' + rot[i % 5] + 'deg" aria-label="' + esc(a.title) + '"><img src="' + url(a.image) + '" alt="' + esc(a.title) + '"><span class="pin" aria-hidden="true"></span>' + (a.x ? '<span class="xbadge" aria-hidden="true"><svg width="14" height="14"><use href="#s-x"/></svg></span>' : '') + '</button>'; }).join('');
     },
+    xposts: function (list) {
+      var el = $('slot-xfeed'), box = $('xfeed'); if (!el || !box) return;
+      var ids = (list || []).map(function (p) { var m = /status(?:es)?\/(\d{5,})/.exec(p && p.url || ''); return m && m[1]; }).filter(Boolean);
+      box.hidden = !ids.length; if (!ids.length) { el.innerHTML = ''; return; }
+      var key = ids.join(','); if (el.dataset.key === key) return; el.dataset.key = key;
+      el.innerHTML = ids.map(function (id) { return '<div class="xp"><blockquote class="twitter-tweet" data-lang="ar" data-dnt="true"><a href="https://twitter.com/i/status/' + id + '"></a></blockquote></div>'; }).join('');
+      // X's official embed: shows the post with its photos and playable video, no login needed
+      if (window.twttr && window.twttr.widgets) window.twttr.widgets.load(el);
+      else if (!document.getElementById('x-wjs')) { var s = document.createElement('script'); s.id = 'x-wjs'; s.async = true; s.src = 'https://platform.twitter.com/widgets.js'; document.body.appendChild(s); }
+    },
     partners: function (list) {
       var el = $('slot-ticker'); if (!el || !list) return;
       var sep = '<span class="tsep" aria-hidden="true"><svg viewBox="158 118 292 214"><use href="#mbd-logo"/></svg></span>';
@@ -142,16 +152,6 @@
       if (e.data.focus) { var t = document.getElementById(e.data.focus) || document.querySelector(e.data.focus); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   } else {
-    var get = function (f) { return fetch(f + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); };
-    Promise.all([get('site.json'), get('x.json')]).then(function (v) {
-      var site = v[0], x = v[1];
-      // posts pulled from the association's X account (by the scheduled GitHub Action) go first on the board
-      if (site && x && x.posts && x.posts.length && site.xAuto !== false) {
-        var seen = {}; (site.ads || []).forEach(function (a) { seen[a.image] = 1; });
-        site.ads = x.posts.filter(function (p) { return p.image && !seen[p.image]; }).slice(0, 8)
-          .map(function (p) { return { image: p.image, title: p.text || 'من حساب الجمعية على إكس', x: 1 }; }).concat(site.ads || []);
-      }
-      render(site);
-    });
+    fetch('site.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(render).catch(function () {});
   }
 })();
