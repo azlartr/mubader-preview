@@ -71,7 +71,7 @@
     ads: function (list) {
       var el = $('slot-ads'); if (!el || !list) return;
       var rot = [-1.6, 1.2, -0.6, 1.8, -1.1];
-      el.innerHTML = list.map(function (a, i) { return '<button class="poster" type="button" style="--r:' + rot[i % 5] + 'deg" aria-label="' + esc(a.title) + '"><img src="' + url(a.image) + '" alt="' + esc(a.title) + '"><span class="pin" aria-hidden="true"></span></button>'; }).join('');
+      el.innerHTML = list.map(function (a, i) { return '<button class="poster' + (a.x ? ' from-x' : '') + '" type="button" style="--r:' + rot[i % 5] + 'deg" aria-label="' + esc(a.title) + '"><img src="' + url(a.image) + '" alt="' + esc(a.title) + '"><span class="pin" aria-hidden="true"></span>' + (a.x ? '<span class="xbadge" aria-hidden="true"><svg width="14" height="14"><use href="#s-x"/></svg></span>' : '') + '</button>'; }).join('');
     },
     partners: function (list) {
       var el = $('slot-ticker'); if (!el || !list) return;
@@ -142,6 +142,16 @@
       if (e.data.focus) { var t = document.getElementById(e.data.focus) || document.querySelector(e.data.focus); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   } else {
-    fetch('site.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(render).catch(function () {});
+    var get = function (f) { return fetch(f + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); };
+    Promise.all([get('site.json'), get('x.json')]).then(function (v) {
+      var site = v[0], x = v[1];
+      // posts pulled from the association's X account (by the scheduled GitHub Action) go first on the board
+      if (site && x && x.posts && x.posts.length && site.xAuto !== false) {
+        var seen = {}; (site.ads || []).forEach(function (a) { seen[a.image] = 1; });
+        site.ads = x.posts.filter(function (p) { return p.image && !seen[p.image]; }).slice(0, 8)
+          .map(function (p) { return { image: p.image, title: p.text || 'من حساب الجمعية على إكس', x: 1 }; }).concat(site.ads || []);
+      }
+      render(site);
+    });
   }
 })();
