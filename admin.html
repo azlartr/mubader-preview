@@ -206,7 +206,7 @@ textarea.inp{resize:vertical;min-height:84px}
   function lsSet(k,v){try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}
   function $(s,r){return (r||document).querySelector(s)}
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-  function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('show')},3200)}
+  function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('show')},t.length>40?6500:3200)}
   function gh(path,opt){opt=opt||{};opt.headers=Object.assign({'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'},opt.headers||{});return fetch(API+path,opt)}
   function b64(str){return btoa(unescape(encodeURIComponent(str)))}
   function unb64(s){return decodeURIComponent(escape(atob(s.replace(/\s/g,''))))}
@@ -328,20 +328,22 @@ textarea.inp{resize:vertical;min-height:84px}
     var path=inp.dataset.img, max=+inp.dataset.max||1400, thumb=inp.closest('.imgf').querySelector('.thumb'); thumb.classList.add('busy');
     toWebp(inp.files[0],max).then(function(b64data){
       var name='assets/u/'+Date.now()+'-'+Math.random().toString(36).slice(2,7)+'.webp';
-      return gh('/contents/'+name,{method:'PUT',body:JSON.stringify({message:'Upload image',content:b64data,branch:BRANCH})}).then(function(r){ if(!r.ok) throw r.status; return name; }).then(function(n){
+      return gh('/contents/'+name,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'Upload image',content:b64data,branch:BRANCH})}).then(function(r){ if(r.ok) return name; return r.text().then(function(t){ var m=''; try{m=JSON.parse(t).message||''}catch(e){} throw {status:r.status,msg:m}; }); }).then(function(n){
         /* show it in the preview right away from memory, until Pages has the new file */
         setAt(path,n); var dataUrl='data:image/webp;base64,'+b64data; thumb.style.backgroundImage='url('+dataUrl+')'; thumb.classList.remove('busy','empty');
         var tmp=JSON.parse(JSON.stringify(site)); setAtObj(tmp,path,dataUrl); lsSet('mbd.draft',JSON.stringify(site)); setDirty(true);
         try{ $('#frame').contentWindow.postMessage({type:'mbd-draft',site:tmp},location.origin) }catch(e){}
         toast('تم رفع الصورة');
       });
-    }).catch(function(){ thumb.classList.remove('busy'); toast('تعذّر رفع الصورة، حاول مرة أخرى'); });
+    }).catch(function(err){ thumb.classList.remove('busy'); inp.value='';
+      var why = !err ? '' : err.decode ? 'الملف ليس صورة يقرأها المتصفح (جرّب PNG أو JPG).' : err.status===403||err.status===404 ? 'المفتاح لا يملك صلاحية الكتابة على الملفات (Contents: Read and write).' : err.status===401 ? 'انتهت صلاحية المفتاح، سجّل الدخول من جديد.' : err.status===422 ? 'رفض GitHub الملف ('+(err.msg||'422')+').' : err.status ? 'خطأ '+err.status+(err.msg?': '+err.msg:'') : 'تحقق من الاتصال.';
+      toast('تعذّر رفع الصورة. '+why); if(window.console) console.error('upload failed',err); });
   });
   function setAtObj(o,p,v){var ks=p.split('.');for(var i=0;i<ks.length-1;i++)o=o[ks[i]];o[ks[ks.length-1]]=v}
   function toWebp(file,max){
     return new Promise(function(res,rej){ var img=new Image(); img.onload=function(){ var s=Math.min(1,max/Math.max(img.width,img.height)); var c=document.createElement('canvas'); c.width=Math.round(img.width*s); c.height=Math.round(img.height*s);
       c.getContext('2d').drawImage(img,0,0,c.width,c.height); var d=c.toDataURL('image/webp',.82); if(d.indexOf('image/webp')<0) d=c.toDataURL('image/jpeg',.85); res(d.split(',')[1]); URL.revokeObjectURL(img.src); };
-      img.onerror=rej; img.src=URL.createObjectURL(file); });
+      img.onerror=function(){ rej({decode:true}) }; img.src=URL.createObjectURL(file); });
   }
 
   /* ---------- publish ---------- */
