@@ -74,6 +74,13 @@ textarea.inp{resize:vertical;min-height:84px}
 .card{background:#fff;border-radius:22px;box-shadow:inset 0 0 0 1px var(--line);padding:18px;margin-bottom:12px;position:relative;transition:box-shadow .3s}
 .card:hover{box-shadow:inset 0 0 0 1px var(--line2),0 16px 40px -30px rgba(80,15,40,.5)}
 .card .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px 14px}
+.grip{display:grid;grid-template-columns:repeat(2,4px) auto;grid-template-rows:repeat(3,4px);grid-auto-flow:column;gap:4px 4px;align-content:center;padding:0 12px;height:34px;border-radius:10px;cursor:grab;touch-action:none;background:var(--bg);color:var(--mute);font-size:12.5px}
+.grip i{width:4px;height:4px;border-radius:50%;background:currentColor}
+.grip b{grid-row:1/4;align-self:center;font-weight:500;margin-inline-start:6px}
+.grip:hover{color:#B01E54}
+.card.dragging{box-shadow:0 18px 40px -12px rgba(80,15,40,.35),inset 0 0 0 2px #B01E54;z-index:5;cursor:grabbing;opacity:.96}
+.card.drop-ph{opacity:.35}
+body.dragging-any{user-select:none;cursor:grabbing}
 .card .tools{display:flex;gap:6px;justify-content:flex-end;margin-top:6px}
 .ic{all:unset;cursor:pointer;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--bg);color:var(--mute);transition:background .2s,color .2s}
 .ic:hover{background:var(--blush);color:var(--m)}
@@ -278,10 +285,11 @@ textarea.inp{resize:vertical;min-height:84px}
   }
   function listEditor(arr,path,fields,item,blank){
     var h=(arr||[]).map(function(it,i){
-      return '<div class="card"><span class="num-badge">'+esc(item)+' '+(i+1)+'</span><div class="row">'+fields.map(function(f){return field(f,it[f.k],path+'.'+i+'.'+f.k)}).join('')+'</div><div class="tools"><button class="ic" type="button" data-move="'+path+'" data-i="'+i+'" data-d="-1" aria-label="تقديم"><svg><use href="#i-up"/></svg></button><button class="ic" type="button" data-move="'+path+'" data-i="'+i+'" data-d="1" aria-label="تأخير"><svg><use href="#i-down"/></svg></button><button class="ic del" type="button" data-del="'+path+'" data-i="'+i+'" aria-label="حذف"><svg><use href="#i-del"/></svg></button></div></div>';
+      return '<div class="card" data-list="'+path+'" data-i="'+i+'"><span class="num-badge">'+esc(item)+' '+(i+1)+'</span><div class="row">'+fields.map(function(f){return field(f,it[f.k],path+'.'+i+'.'+f.k)}).join('')+'</div><div class="tools"><span class="grip" title="اسحب لتغيير الترتيب"><i></i><i></i><i></i><i></i><i></i><i></i><b>اسحب للترتيب</b></span><span style="flex:1"></span><button class="ic" type="button" data-move="'+path+'" data-i="'+i+'" data-d="-1" aria-label="تقديم"><svg><use href="#i-up"/></svg></button><button class="ic" type="button" data-move="'+path+'" data-i="'+i+'" data-d="1" aria-label="تأخير"><svg><use href="#i-down"/></svg></button><button class="ic del" type="button" data-del="'+path+'" data-i="'+i+'" aria-label="حذف"><svg><use href="#i-del"/></svg></button></div></div>';
     }).join('');
     return h+'<button class="add" type="button" data-add="'+path+'" data-blank=\''+esc(JSON.stringify(blank))+'\'><svg width="18" height="18"><use href="#i-plus"/></svg>إضافة '+esc(item)+'</button>';
   }
+  var shownRoom=null;
   function show(id){
     room=id; var r=ROOMS.filter(function(x){return x.id===id})[0];
     [].slice.call(document.querySelectorAll('.room')).forEach(function(b){b.setAttribute('aria-current',b.dataset.id===id)});
@@ -306,7 +314,7 @@ textarea.inp{resize:vertical;min-height:84px}
       h+='<div class="group-title">الشركات والجهات</div>'+listEditor(site.assembly.orgs,'assembly.orgs',[{k:'name',l:'اسم الجهة'},{k:'logo',l:'الشعار',t:'image',max:600}],'جهة',{name:'',logo:''});
       h+='<div class="group-title">الأعضاء</div>'+listEditor(site.assembly.people,'assembly.people',[{k:'name',l:'الاسم'},{k:'photo',l:'الصورة',t:'image',max:600}],'عضو',{name:'',photo:''});
     }
-    $('#main').innerHTML=h; $('#main').scrollTop=0; push(r.focus);
+    var fresh=shownRoom!==id; shownRoom=id; $('#main').innerHTML=h; if(fresh){ $('#main').scrollTop=0; push(r.focus); } else push();
   }
 
   /* ---------- state helpers ---------- */
@@ -355,9 +363,32 @@ textarea.inp{resize:vertical;min-height:84px}
       var m=/status(?:es)?\/(\d{5,})/.exec(inp.value||''); if(!m){ toast('ما لقيت رابط تغريدة. انسخ الرابط من إكس (مشاركة ← نسخ الرابط) وجرّب مرة ثانية.'); return; }
       site.xposts=site.xposts||[]; var url='https://x.com/Diorg01/status/'+m[1];
       if(site.xposts.some(function(p){return (p.url||'').indexOf(m[1])>=0})){ toast('هالتغريدة مضافة من قبل.'); return; }
-      site.xposts.unshift({url:url}); changed(); show(room); toast('أُضيفت التغريدة. اضغط «نشر على الموقع» لتظهر.');
+      site.xposts.unshift({url:url}); setDirty(true); var st=$('#main').scrollTop; show(room); $('#main').scrollTop=st; push('#xfeed'); toast('أُضيفت التغريدة. اضغط «نشر على الموقع» لتظهر.');
     };
     if(!inp.value && navigator.clipboard && navigator.clipboard.readText){ navigator.clipboard.readText().then(function(v){ inp.value=(v||'').trim(); go(); }).catch(go); } else go();
+  });
+  /* ---------- drag cards to reorder (mouse and touch) ---------- */
+  $('#main').addEventListener('pointerdown',function(e){
+    var g=e.target.closest('.grip'); if(!g) return; e.preventDefault();
+    var card=g.closest('.card'), list=card.dataset.list, from=+card.dataset.i, box=card.parentNode;
+    var sibs=function(){return [].slice.call(box.querySelectorAll(':scope > .card[data-list="'+list+'"]'))};
+    var startY=e.clientY, main=$('#main'); card.classList.add('dragging'); document.body.classList.add('dragging-any'); g.setPointerCapture(e.pointerId);
+    var move=function(ev){
+      card.style.transform='translateY('+(ev.clientY-startY)+'px)';
+      var mr=main.getBoundingClientRect(); if(ev.clientY<mr.top+60) main.scrollTop-=12; else if(ev.clientY>mr.bottom-60) main.scrollTop+=12;
+      sibs().forEach(function(c){ if(c===card) return; var r=c.getBoundingClientRect(), mid=r.top+r.height/2;
+        var cr=card.getBoundingClientRect(), before=c.compareDocumentPosition(card)&Node.DOCUMENT_POSITION_PRECEDING;
+        if(!before && ev.clientY<mid && ev.clientY>r.top){ var y0=card.getBoundingClientRect().top; box.insertBefore(card,c); startY+=card.getBoundingClientRect().top-y0; card.style.transform='translateY('+(ev.clientY-startY)+'px)'; }
+        else if(before && ev.clientY>mid && ev.clientY<r.bottom){ var y1=card.getBoundingClientRect().top; box.insertBefore(card,c.nextSibling); startY+=card.getBoundingClientRect().top-y1; card.style.transform='translateY('+(ev.clientY-startY)+'px)'; }
+      });
+    };
+    var up=function(){
+      g.removeEventListener('pointermove',move); g.removeEventListener('pointerup',up); g.removeEventListener('pointercancel',up);
+      card.classList.remove('dragging'); card.style.transform=''; document.body.classList.remove('dragging-any');
+      var to=sibs().indexOf(card); if(to<0||to===from) return;
+      var a=getAt(list), it=a.splice(from,1)[0]; a.splice(to,0,it); changed(); var st=main.scrollTop; show(room); main.scrollTop=st; toast('تغيّر الترتيب. اضغط «نشر على الموقع» ليظهر.');
+    };
+    g.addEventListener('pointermove',move); g.addEventListener('pointerup',up); g.addEventListener('pointercancel',up);
   });
   function setAtObj(o,p,v){var ks=p.split('.');for(var i=0;i<ks.length-1;i++)o=o[ks[i]];o[ks[ks.length-1]]=v}
   function toWebp(file,max){

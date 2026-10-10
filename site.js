@@ -149,7 +149,11 @@
     window.addEventListener('message', function (e) {
       if (e.origin !== location.origin || !e.data || e.data.type !== 'mbd-draft') return;
       render(e.data.site);
-      if (e.data.focus) { var t = document.getElementById(e.data.focus) || document.querySelector(e.data.focus); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      if (e.data.focus) {
+        var go = function (smooth) { var t = document.getElementById(e.data.focus) || document.querySelector(e.data.focus); if (t && !t.hidden) t.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' }); };
+        // images and embeds above the target keep loading, so settle on it again once they have
+        go(true); setTimeout(go, 900); setTimeout(go, 2200);
+      }
     });
   } else {
     fetch('site.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(render).catch(function () {});
