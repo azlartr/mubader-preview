@@ -162,16 +162,16 @@
  ],
  "ads": [
   {
-   "image": "assets/ads/ad21.webp",
-   "title": "قريباً غبقة مبادر في رمضان"
+   "image": "assets/ads/ad16.webp",
+   "title": "حصول الجمعية على شهادة الأيزو 9001"
   },
   {
    "image": "assets/ads/ad31.webp",
    "title": "جائزة أهالي جدة للمعلم المتميز: مليون ريال"
   },
   {
-   "image": "assets/ads/ad16.webp",
-   "title": "حصول الجمعية على شهادة الأيزو 9001"
+   "image": "assets/ads/ad21.webp",
+   "title": "قريباً غبقة مبادر في رمضان"
   },
   {
    "image": "assets/ads/ad22.webp",
@@ -483,17 +483,17 @@
    {
     "name": "فياض أسعد أسعد الدندشي",
     "role": "عضو مجلس الإدارة",
-    "photo": "assets/people/a6dd8bb51f.webp"
+    "photo": "assets/u/1791649068211-2sauk.webp"
    },
    {
     "name": "سعود غسان أحمد السليمان",
     "role": "عضو مجلس الإدارة",
-    "photo": "assets/people/39a01f5085.webp"
+    "photo": "assets/u/1791649118154-o6n47.webp"
    },
    {
     "name": "م. سهل مخضار خضران الثبيتي",
     "role": "عضو مجلس الإدارة",
-    "photo": "assets/people/1b3c161c86.webp"
+    "photo": "assets/u/1791649143589-ul1mu.webp"
    }
   ],
   "term1": [
@@ -547,19 +547,19 @@
     "photo": "assets/people/37d922fe8e.webp"
    },
    {
+    "name": "د. عبدالله بن صالح الغامدي",
+    "role": "عضو اللجنة",
+    "photo": "assets/u/1791649235226-050zb.webp"
+   },
+   {
     "name": "عبدالله بن سعد السليمان",
     "role": "نائب رئيس اللجنة التنفيذية",
-    "photo": "assets/people/3ff9b97a49.webp"
+    "photo": "assets/u/1791649201991-u0ydw.webp"
    },
    {
     "name": "حسن الزهراني",
     "role": "عضو اللجنة",
-    "photo": "assets/people/fa3f9c8a4e.webp"
-   },
-   {
-    "name": "د. عبدالله بن صالح الغامدي",
-    "role": "عضو اللجنة",
-    "photo": "assets/people/896bbb7eda.webp"
+    "photo": "assets/u/1791649224063-wznl2.webp"
    }
   ],
   "staff": [
