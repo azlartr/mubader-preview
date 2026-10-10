@@ -162,12 +162,12 @@
  ],
  "ads": [
   {
-   "image": "assets/ads/ad16.webp",
-   "title": "حصول الجمعية على شهادة الأيزو 9001"
-  },
-  {
    "image": "assets/ads/ad31.webp",
    "title": "جائزة أهالي جدة للمعلم المتميز: مليون ريال"
+  },
+  {
+   "image": "assets/ads/ad16.webp",
+   "title": "حصول الجمعية على شهادة الأيزو 9001"
   },
   {
    "image": "assets/ads/ad21.webp",
@@ -745,7 +745,13 @@
    "url": "https://x.com/diorg01/status/2107792021482295338?s=46&t=3Xzt8YZo3sICponKDXn3UQ"
   },
   {
-   "url": ""
+   "url": "https://x.com/Diorg01/status/2107796771321610448?s=20"
+  },
+  {
+   "url": "https://x.com/Diorg01/status/2107795017339437249?s=20"
+  },
+  {
+   "url": "https://x.com/Diorg01/status/2108614932170490038?s=20"
   }
  ]
 }
